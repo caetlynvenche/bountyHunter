@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #42374B;
+    color: white;
+}
+
+header {
+    height: 250px;
+    background-image: url("https://images.pexels.com/photos/32237/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: white;
+        font-size: 50px;
+    }
+}
+
+form {
+    width: fit-content;
+    padding: 30px;
+    margin: auto;
+    button {
+        width: 150px;
+        height: 30px;
+        font-size: 10px;
+        margin: auto;
+        border: none;
+    }
+    div {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type=text], input[type=number] {
+    text-align: center;
+}
+
+.name {
+    border: none;
+    width: 100%;
+}
+
+input {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+label {
+    font-size: 20px;
+}
+
+section {
+    border: 3px solid white;
+    width: 75%;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+
+    h1 {
+        font-size: 45px;
+        padding: 5px;
+    }
+    
+    button {
+        font-size: 20px;
+        padding: 5px;
+        margin: auto;
+    }
+
+    form {
+        border: 1px solid white;
+        margin-top: 20px;
+    }
+}
+
+h2 {
+        padding: 5px;
+    }
+    p {
+        padding: 5px;
+    }
