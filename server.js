@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const morgan = require("morgan")
 const path = require("path")
 const PORT = process.env.PORT || 5683
+// const secret = process.env.SECRET || "majestic unicorns aren't pink"
 require("dotenv").config()
 
 
