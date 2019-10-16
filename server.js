@@ -2,14 +2,18 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 const morgan = require("morgan")
-
+const path = require("path")
+const PORT = process.env.PORT || 5683
+require("dotenv").config()
 
 
 app.use(express.json())
 
 app.use(morgan("dev"))
 
-mongoose.connect("mongodb://localhost:27017/bountydb",
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost:27017/bountydb",
     {
         useNewUrlParser: true,
         useFindAndModify: true,
@@ -24,8 +28,11 @@ app.use((err, req, res, next) => {
     return res.send({errMsg: err.message})
 })
 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"))
+})
+//test
 
-
-app.listen(5683, () => {
+app.listen(PORT, () => {
     console.log("Server running on 5683")
 })
